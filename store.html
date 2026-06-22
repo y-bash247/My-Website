@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div>
+        <img class="logo-image" height="12%" width="12%" src= "https://drive.google.com/file/d/1vTm1ZXNyCnPN17hTFMRrUuFfDlooicPF/view?usp=drive_link">
+       </div>
+            <button id="cartIconBtn" class="relative bg-amber-700 hover:bg-amber-600 px-4 py-2 rounded-lg flex items-center gap-2 transition-all">
+                <svg xmlns="http://w3.org" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span id="cartCountBadge" class="bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full absolute -top-2 -right-2 min-w-5 text-center">0</span>
+            </button>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        
+        <div class="hero-text" style="text-align: center;">
+            <h1>BASH ELECTRONICS SHOP</h1>
+            <br>
+            <h2>Our Products</h2>
+            </div>
+    </section>
+
+    <main class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card" data-id="1" data-name="Laptop" data-price="2,500.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/15pkjt6tSqZUzRbyG6rqSs_mIRuVct-pJ/view?usp=drive_link" alt="Laptop">
+                <div class="overlay">
+                    <h3>Laptop</h3>
+                    <p>GHS2,500.00</p>
+                </div>
+            </div>
+            <button data-id="1" data-name="Laptop" data-price="2500" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-id="2" data-name="Pendrive" data-price="65.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1RIeN3K9iUaRkiEX19pn5tSh524QmMZi_/view?usp=drive_link" alt="Pendrive">
+                <div class="overlay">
+                    <h3>Pendive</h3>
+                    <p>GHS65.00</p>
+                </div>
+            </div>
+            <button data-id="2" data-name="pendrive" data-price="90" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-id="3" data-name="Phones_1" data-price="110.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1JMovFuQMohx8m0n0-hZdXTfmWV4i0Wwz/view?usp=drive_link" alt="Phones_1">
+                <div class="overlay">
+                    <h3>Keypad phone</h3>
+                    <p>GHS110.00</p>
+                </div>
+            </div>
+            <button data-id="3" data-name="phones_1" data-price="110" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 4 -->
+        <div class="product-card" data-id="4" data-name="Phones" data-price="1,640.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1GCkeSh5qsmakP7-Mk7MivI22296fkvwE/view?usp=drive_link" alt="Phones">
+                <div class="overlay">
+                    <h3>Smart phone</h3>
+                    <p>GHS1,640.00</p>
+                </div>
+            </div>
+            <button data-id="4" data-name="phones" data-price="1640" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 5 -->
+        <div class="product-card" data-id="5" data-name="Shoes" data-price="99.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/15nOLJd9QavHN83Ohlf5OZCXXOLGpvb2U/view?usp=drive_link" alt="Shoes">
+                <div class="overlay">
+                    <h3>Mens Shoes</h3>
+                    <p>GHS99.00</p>
+                </div>
+            </div>
+            <button data-id="5" data-name="shoes" data-price="99" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 6 -->
+        <div class="product-card" data-id="6" data-name="Telvision" data-price="1,620.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1AVfpWgzismYgPYuoqHjFBO1lpvBvtqMq/view?usp=drive_link" alt="Television">
+                <div class="overlay">
+                    <h3> 32' Television</h3>
+                    <p>GHS1,620.00</p>
+                </div>
+            </div>
+            <button data-id="6" data-name="Television" data-price="1620" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    
+
+    <!-- Product 7 -->
+        <div class="product-card" data-id="7" data-name="sound-bar" data-price="1,225.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1BwRA1QfZwhePipsNggqscuPNdi_aVb94/view?usp=drive_link" alt="sound bar">
+                <div class="overlay">
+                    <h3> Sound bar</h3>
+                    <p>GHS1,225.00</p>
+                </div>
+            </div>
+            <button data-id="7" data-name="sound-bar" data-price="1225" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 8 -->
+        <div class="product-card" data-id="8" data-name="pressing iron" data-price="120.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1JbJPh1hnbDAimibsS3CB7pRtmk9JLkan/view?usp=drive_link" alt="pressing iron">
+                <div class="overlay">
+                    <h3> Pressing Iron</h3>
+                    <p>GHS120.00</p>
+                </div>
+            </div>
+            <button data-id="8" data-name="pressing-iron" data-price="120" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 9 -->
+        <div class="product-card" data-id="9" data-name="microwave" data-price="750.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1dDvDUFDcejlUJudAOIz-udqE9gxwFeBY/view?usp=drive_link" alt="microwave">
+                <div class="overlay">
+                    <h3> Microwave</h3>
+                    <p>GHS750.00</p>
+                </div>
+            </div>
+            <button data-id="9" data-name="microwave" data-price="750" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 10 -->
+        <div class="product-card" data-id="10" data-name="heater" data-price="260.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/1ZvpX9YCdt1a_wSaiFrmw_-pKepRyxzC0/view?usp=drive_link" alt="heater">
+                <div class="overlay">
+                    <h3> Heater Cup</h3>
+                    <p>GHS260.00</p>
+                </div>
+            </div>
+            <button data-id="10" data-name="heater" data-price="260" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+
+        <!-- Product 11 -->
+        <div class="product-card" data-id="11" data-name="fridge" data-price="1,820.00">
+            <div class="image-container">
+                <img src="https://drive.google.com/file/d/17OeKwD9cOAZfHP5ot6ySod8iDHmdD__o/view?usp=drive_link" alt="fridge">
+                <div class="overlay">
+                    <h3> Double door Fridge</h3>
+                    <p>GHS1,820.00</p>
+                </div>
+            </div>
+            <button data-id="11" data-name="fridge" data-price="1820" class="product-btn w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-green-600 font-medium transition-all" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        </main>
+
+
+
+<!-- Shopping Modal (Form View Overlay) -->
+<div id="cartModal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in">
+  <div id="cartModalContent" class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto flex flex-col">
+    <!-- Header Block -->
+    <div class="p-5 border-b flex justify-between items-center bg-gray-50">
+      <h2 class="text-xl font-bold text-gray-800">Your Shopping Cart</h2>
+      <button id="closeModalCross" class="text-gray-400 hover:text-gray-600 text-2xl font-bold">&times;</button>
+    </div>
+
+    <!-- Scrollable Component Content Container -->
+    <div class="p-6 space-y-6 flex-1">
+     
+        <!-- Section 1: Dynamic Order Items Table -->
+      <section>
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-3">1. Items Selected</h3>
+        <div class="overflow-x-auto border rounded-xl">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="bg-gray-50 border-b text-gray-600 font-semibold">
+                <th class="p-3 w-12 text-center">S/N</th>
+                <th class="p-3">Item</th>
+                <th class="p-3 text-right">Price</th>
+                <th class="p-3 text-center w-32">Quantity</th>
+                <th class="p-3 text-center w-24">Action</th>
+              </tr>
+            </thead>
+            <tbody id="cartTableBody" class="divide-y text-gray-700">
+              <!-- Rendered via JavaScript dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2: Input & Validation Area -->
+      <section class="bg-amber-50/50 border border-amber-100 p-5 rounded-xl space-y-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-amber-800">2. Customer Information</h3>
+        <form id="checkoutForm" class="space-y-4" novalidate>
+          <div class="relative">
+            <input type="text" id="custName" placeholder="Your Name" class="w-full px-4 py-3 bg-amber-50/60 border border-amber-200 rounded-lg outline-none focus:border-amber-500 focus:bg-white transition-all text-sm">
+            <p id="errName" class="text-xs text-red-500 mt-1 hidden"></p>
+          </div>
+          <div class="relative">
+            <input type="email" id="custEmail" placeholder="Your Email" class="w-full px-4 py-3 bg-amber-50/60 border border-amber-200 rounded-lg outline-none focus:border-amber-500 focus:bg-white transition-all text-sm">
+            <p id="errEmail" class="text-xs text-red-500 mt-1 hidden"></p>
+          </div>
+          <div class="relative">
+            <input type="tel" id="custPhone" placeholder="Your Phone Number" class="w-full px-4 py-3 bg-amber-50/60 border border-amber-200 rounded-lg outline-none focus:border-amber-500 focus:bg-white transition-all text-sm">
+            <p id="errPhone" class="text-xs text-red-500 mt-1 hidden"></p>
+          </div>
+        </form>
+      </section>
+
+      <!-- Section 3: Aggregate Summary Area -->
+      <section class="text-center py-4 border-y border-dashed border-gray-200">
+        <h3 class="text-gray-500 font-medium text-sm mb-1">Total Amount to be Paid</h3>
+        <p id="cartTotalDisplay" class="text-3xl font-extrabold text-gray-900 tracking-tight">GHS0</p>
+      </section>
+
+      <!-- Section 4: Process Modifiers Block -->
+      <section class="flex flex-col sm:flex-row gap-3 pt-2">
+        <button id="btnContinue" class="flex-1 py-3 border border-orange-200 text-orange-600 font-semibold rounded-xl hover:bg-orange-50 transition-all text-sm order-2 sm:order-1">Continue Shopping</button>
+        <button id="btnCheckout" class="flex-1 py-3 bg-orange-500 text-white font-semibold rounded-xl hover:bg-orange-600 shadow-md shadow-orange-500/20 transition-all text-sm order-1 sm:order-2">Checkout</button>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Transaction Receipt Overlay (Summary Modal) -->
+<div id="summaryModal" class="fixed inset-0 bg-black/60 hidden z-50 flex items-center justify-center p-4 backdrop-blur-md">
+  <div class="bg-white rounded-2xl shadow-2xl p-6 max-w-md w-full border-t-8 border-green-500 space-y-6 text-center">
+    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto text-green-500">
+      <svg xmlns="http://w3.org" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+      </svg>
+    </div>
+    <div class="space-y-2">
+      <h2 class="text-2xl font-bold text-gray-800">Order Confirmed!</h2>
+      <p id="summaryMessage" class="text-sm text-gray-600 font-medium leading-relaxed px-2"></p>
+    </div>
+    <div class="bg-gray-50 p-4 rounded-xl text-left text-sm border">
+      <p class="font-bold text-gray-400 uppercase text-xs tracking-wider mb-2">Manifest Summary</p>
+      <ul id="summaryItemsList" class="divide-y space-y-2 text-gray-700">
+        <!-- Rendered dynamically -->
+      </ul>
+    </div>
+    <button id="btnSummaryOk" type="button" onclick="payWithPaystack()">Ok</button>
+  </div>
+</div>
+
+        
+        <script src="script.js"></script>
+        <script src="https://js.paystack.co/v2/inline.js"></script> 
+    </body>
+</html>

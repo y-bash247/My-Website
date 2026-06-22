@@ -1,0 +1,542 @@
+/* Base Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header & Cart Icon */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.image-logo {
+  margin-top: 0%;
+}
+.hero-text {
+    font-size: 19px;
+    color: green;
+    padding-bottom: 20px;
+}
+
+.para-text {
+    padding: 0px 20px 0px 60px;
+    margin: 0, 15. 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cart-icon-container {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff3b30;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Product Grid (Responsive Desktop/Tablet) */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Enforce maximum of 3 items per row on wider screens */
+@media (min-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Container & Hover Overlay */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Keeps image perfectly square */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Show details on hover */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    width: 40%;
+    padding: 12px;
+    background-color: #007aff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #39b300;
+}
+
+/* Toggle state for removing from cart */
+.add-to-cart-btn.in-cart {
+    background-color: #ff3b30;
+}
+
+.add-to-cart-btn.in-cart:hover {
+    background-color: #c72c24;
+}
+
+
+
+/* ==========================================================================
+   1. Base Setup & Resets
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #f9fafb;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* ==========================================================================
+   2. Header Components
+   ========================================================================== */
+header {
+  background-color: #92400e; /* bg-amber-800 */
+  color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+#cartIconBtn {
+  position: relative;
+  background-color: #b45309; /* bg-amber-700 */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#cartIconBtn:hover {
+  background-color: green; /* bg-amber-600 */
+}
+
+#cartIconBtn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#cartCountBadge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: #f97316; /* bg-orange-500 */
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  min-width: 1.25rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   3. Main Layout & Product Cards
+   ========================================================================== */
+main.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Responsive grid breaks */
+@media (min-width: 768px) {
+  main.container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  main.container { grid-template-columns: repeat(3, 1fr); }
+}
+
+main .border {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease-in-out;
+}
+
+main .border:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+main h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+main p {
+  color: #ea580c; /* text-orange-600 */
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.product-btn {
+  width: 40%;
+  background-color: #f97316;
+  color: #ffffff;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.product-btn:hover {
+  background-color: green;
+}
+
+/* ==========================================================================
+   4. Modals & Overlays (Cart & Summary)
+   ========================================================================== */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Background Backdrops */
+#cartModal { background-color: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); }
+#summaryModal { background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(8px); }
+
+/* Utility class to hide element models by default */
+.hidden {
+  display: none !important;
+}
+
+/* Cart Modal Box */
+#cartModalContent {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 42rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#cartModalContent > div:first-child {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9fafb;
+}
+
+#cartModalContent h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #0cbd47a2;
+  margin-top: 12px;
+}
+
+#closeModalCross {
+  background: transparent;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+}
+#closeModalCross:hover { color: #dd3434; }
+
+.space-y-6 > * + * { margin-top: 1.5rem; }
+.p-6 { padding: 1.5rem; }
+
+/* ==========================================================================
+   5. Dynamic Cart Table (Section 1)
+   ========================================================================== */
+section h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #9ca3af;
+  margin-bottom: 0.75rem;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+tr.bg-gray-50 { background-color: #f9fafb; border-bottom: 1px solid #e5e7eb; color: #4b5563; font-weight: 600; }
+th, td { padding: 0.75rem; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.w-12 { width: 3rem; }
+.w-32 { width: 8rem; }
+.w-24 { width: 6rem; }
+.divide-y tr { border-bottom: 1px solid #e5e7eb; color: #374151; }
+
+/* ==========================================================================
+   6. Customer Info & Form Fields (Section 2)
+   ========================================================================== */
+section.bg-amber-50\/50 {
+  background-color: rgba(254, 243, 199, 0.5);
+  border: 1px solid #fde68a;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+section.bg-amber-50\/50 h3 { color: #92400e; }
+
+.space-y-4 > * + * { margin-top: 1rem; }
+
+.relative { position: relative; }
+
+form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(254, 243, 199, 0.6);
+  border: 1px solid #fde68a;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+form input:focus {
+  border-color: #d97706;
+  background-color: #ffffff;
+}
+
+.text-xs { font-size: 0.75rem; }
+.text-red-500 { color: #ef4444; margin-top: 0.25rem; }
+
+/* ==========================================================================
+   7. Pricing Display & Call to Actions (Section 3 & 4)
+   ========================================================================== */
+.border-y {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px dashed #e5e7eb;
+  border-bottom: 1px dashed #e5e7eb;
+}
+
+#cartTotalDisplay {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+}
+
+/* Action Buttons Grid */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+#btnContinue {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #fed7aa;
+  color: #ea580c;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background: transparent;
+  transition: all 0.2s;
+}
+#btnContinue:hover { background-color: #fff7ed; }
+
+#btnCheckout {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #f97316;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.2);
+  transition: all 0.2s;
+}
+#btnCheckout:hover { background-color: #ea580c; }
+
+@media (min-width: 640px) {
+  .flex-col { flex-direction: row; }
+  #btnContinue { order: 1; }
+  #btnCheckout { order: 2; }
+}
+
+/* ==========================================================================
+   8. Order Receipt Summary Modal
+   ========================================================================== */
+#summaryModal .bg-white {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  max-width: 28rem;
+  width: 100%;
+  border-top: 8px solid #22c55e; /* border-green-500 */
+  text-align: center;
+}
+
+.w-16 {
+  width: 4rem;
+  height: 4rem;
+  background-color: #dcfce7;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #22c55e;
+}
+.w-16 svg { width: 2.5rem; height: 2.5rem; }
+
+#summaryModal h2 { font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-top: 0.5rem;}
+#summaryModal p.text-sm { color: #4b5563; font-size: 0.875rem; line-height: 1.6; }
+
+.bg-gray-50 {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  text-align: left;
+  font-size: 0.875rem;
+  border: 1px solid #e5e7eb;
+  margin-top: 1rem;
+}
+
+.text-gray-400 { color: #9ca3af; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;}
+
+#btnSummaryOk {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #111827;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+#btnSummaryOk:hover { background-color: #000000; }
+
+/* ==========================================================================
+   9. Custom Animations
+   ========================================================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
